@@ -79,24 +79,60 @@ class Program {
       Console.WriteLine("Please enter a valid initial");
       continue;
     }
-  }while(true);
+  }while(true);// End of third loop
 
-     int total = sale1 + sale2 +sale3;
-    Console.WriteLine("Grand Total: $" + total);
-
-    if(sales[0]>sales[1] && sales[0]>sales[2])
+    if(initial1 == allowedInitials[0] || initial1 == allowedInitials[1])
     {
-      Console.WriteLine("The highest sale was made by " + initial1 + " at $" + sales[0]);
+      initial1 = "Danielle";
     }
-    else if(sales[1]>sales[0] && sales[1]>sales[2])
+    else if(initial1 == allowedInitials[2] || initial1 == allowedInitials[3])
     {
-      Console.WriteLine("The highest sale was made by " + initial2 + " at $" + sales[1]);
+      initial1 = "Edward";
     }
     else
     {
-      Console.WriteLine("The highest sale was made by " + initial3 + " at $" + sales[2]);
+      initial1 = "Francis";
     }
-    //above if statement determines who had the highest sale and displays it to the user.
+
+    if(initial2 == allowedInitials[0] || initial2 == allowedInitials[1])
+      {
+        initial2 = "Danielle";
+      }
+    else if(initial2 == allowedInitials[2] || initial2 == allowedInitials[3])
+      {
+        initial2 = "Edward";
+      }
+    else
+    {
+      initial2 = "Francis";
+    }
+    if(initial3 == allowedInitials[0] || initial3 == allowedInitials[1])
+      {
+        initial3 ="Danielle";
+      }
+    else if(initial3 == allowedInitials[2] || initial3 == allowedInitials[3])
+      {
+        initial3 = "Edward";
+      }
+    else { 
+      initial3 = "Francis";
+      }
+     int total = sale1 + sale2 +sale3;
+    Console.WriteLine("Grand Total: $"+ total); // calculates total sales value
+
+    if(sales[0]>sales[1] && sales[0]>sales[2])
+     {
+      Console.WriteLine("The highest sale was made by " + initial1 + " at $" + sales[0]);
+     }
+    else if(sales[1]>sales[0] && sales[1]>sales[2])
+     {
+      Console.WriteLine("The highest sale was made by " + initial2 + " at $" + sales[1]);
+     }
+    else
+     {
+      Console.WriteLine("The highest sale was made by " + initial3 + " at $" + sales[2]);
+     }
+       //above if statement determines who had the highest sale and displays it to the user.
 
    }
  }
