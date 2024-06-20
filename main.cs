@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+
 class Program {
   public static void Main (string[] args) {
     
@@ -50,7 +51,7 @@ class Program {
     }
     else if (initial2 == "Z" || initial2 == "z")
     {
-      break;
+      goto end;
     }
     else
     {
@@ -80,7 +81,7 @@ class Program {
       continue;
     }
   }while(true);// End of third loop
-
+end:
     if(initial1 == allowedInitials[0] || initial1 == allowedInitials[1])
     {
       initial1 = "Danielle";
