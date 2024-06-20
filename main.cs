@@ -15,7 +15,7 @@ class Program {
       int sale2 = 0;
       int sale3 = 0; //sets the natural state of the intigers to be 0
       
-    int[] sales = {sale1, sale2, sale3};
+   
   
   do //First loop to get the first initial and first sale
     {
@@ -106,6 +106,7 @@ class Program {
     {
       initial2 = "Francis";
     }
+    
     if(initial3 == allowedInitials[0] || initial3 == allowedInitials[1])
       {
         initial3 ="Danielle";
@@ -117,6 +118,7 @@ class Program {
     else { 
       initial3 = "Francis";
       }
+     int[] sales = {sale1, sale2, sale3};
      int total = sale1 + sale2 +sale3;
     Console.WriteLine("Grand Total: $"+ total); // calculates total sales value
 
