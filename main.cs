@@ -3,44 +3,102 @@ using System.Collections.Generic;
 class Program {
   public static void Main (string[] args) {
     
-    var initial1 = "";
-    var initial2 = "";
-    var initial3 = "";
+    string initial1 = "";
+    string initial2 = "";
+    string initial3 = "";
     
     String[] names = {"Danielle", "Edward", "Frasncis"};
     
-    List<string> allowedInitials = new List<string>{"D","E","F"};
+    List<string> allowedInitials = new List<string>{"d","D","e","E","f","F"};
     
       int sale1 = 0;
       int sale2 = 0;
-      int sale3 = 0;
-        int total = sale1 + sale2 +sale3;
-    
+      int sale3 = 0; //sets the natural state of the intigers to be 0
+      
     int[] sales = {sale1, sale2, sale3};
-do 
-{
-  Console.WriteLine("Enter the name of the first salesperson");
-  initial1 = Console.ReadLine();
   
-if (allowedInitials.Contains(initial1))
-  {
-    Console.WriteLine("Enter the value of the first sale");
-    sale1 = int.Parse(Console.ReadLine());
-  }
-  else
+  do //First loop to get the first initial and first sale
     {
-    Console.WriteLine("Please enter a valid initial");
+      Console.WriteLine("Enter the name of the first salesperson");
+      initial1 = Console.ReadLine();
+   if (allowedInitials.Contains(initial1))
+      {
+     Console.WriteLine("Enter the value of the first sale");   
+      sale1 = int.Parse(Console.ReadLine());
+        break;
+      }  
+  
+    else
+       {
+      Console.WriteLine("Please enter a valid initial");
+         
+      continue;    
+       } 
+      
+  }while(true); //end of first loop
+  
+  do // Second loop to determine the second initial and second sale
+  {
+     Console.WriteLine("Please enter the initial of the second salesperson");
+     initial2 = Console.ReadLine();
+    
+    if (allowedInitials.Contains(initial2))
+    {
+      Console.WriteLine("Please enter the second sales value");
+      sale2 = int.Parse(Console.ReadLine());
+      break;
+    }
+    else if (initial2 == "Z" || initial2 == "z")
+    {
+      break;
+    }
+    else
+    {
+      Console.WriteLine("Please enter a valid initial");
       continue;
     }
-    
-    
-   
-
+  }while(true); // End of second loop
   
-}while(true);
-     
-   }
+  do // Third loop to determine the third initial and third sale
+  {
+    Console.WriteLine("Please enter the initial of the third salesperson");
+    initial3 = Console.ReadLine();
+    
+    if (allowedInitials.Contains(initial3))
+    {
+      Console.WriteLine("Please enter the third sales value");
+      sale3 = int.Parse(Console.ReadLine());
+      break;
+    }
+    else if (initial3 == "Z" || initial3 == "z")
+    {
+      break;
+    }
+    else
+    {
+      Console.WriteLine("Please enter a valid initial");
+      continue;
+    }
+  }while(true);
 
+     int total = sale1 + sale2 +sale3;
+    Console.WriteLine("Grand Total: $" + total);
+
+    if(sales[0]>sales[1] && sales[0]>sales[2])
+    {
+      Console.WriteLine("The highest sale was made by " + initial1 + " at $" + sales[0]);
+    }
+    else if(sales[1]>sales[0] && sales[1]>sales[2])
+    {
+      Console.WriteLine("The highest sale was made by " + initial2 + " at $" + sales[1]);
+    }
+    else
+    {
+      Console.WriteLine("The highest sale was made by " + initial3 + " at $" + sales[2]);
+    }
+    //above if statement determines who had the highest sale and displays it to the user.
+
+   }
  }
   
   
