@@ -20,7 +20,7 @@ class Program {
   
   do //First loop to get the first initial and first sale
     {
-      Console.WriteLine("Enter the name of the first salesperson");
+      Console.WriteLine("Enter the initial of the first salesperson");
       initial1 = Console.ReadLine();
    if (allowedInitials.Contains(initial1))
       {
@@ -40,7 +40,7 @@ class Program {
   
   do // Second loop to determine the second initial and second sale
   {
-     Console.WriteLine("Please enter the initial of the second salesperson");
+     Console.WriteLine("Please enter the initial of the second salesperson, or z to end program");
      initial2 = Console.ReadLine();
     
     if (allowedInitials.Contains(initial2))
@@ -62,7 +62,7 @@ class Program {
   
   do // Third loop to determine the third initial and third sale
   {
-    Console.WriteLine("Please enter the initial of the third salesperson");
+    Console.WriteLine("Please enter the initial of the third salesperson, or z to end program");
     initial3 = Console.ReadLine();
     
     if (allowedInitials.Contains(initial3))
